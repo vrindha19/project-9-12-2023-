@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/icomoon.css"> -->
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+
+    <!-- <link rel="stylesheet" href="https://unpkg.com/ionicons@5.0.1/dist/css/ionicons.min.css"> -->
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="https://kit.fontawesome.com/d6a8ce8d77.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        * {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.listing-section, .cart-section {
+  width: 100%;
+  float: left;
+  padding: 1%;
+  border-bottom: 0.01em solid #dddbdb;
+}
+
+.product {
+  float: left;
+  width: 23%;
+  border-radius: 2%;
+  margin: 1%;
+}
+
+.product:hover {
+  box-shadow: 1.5px 1.5px 2.5px 3px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 1.5px 1.5px 2.5px 3px rgba(0, 0, 0, 0.4);  
+  -moz-box-shadow:    1.5px 1.5px 2.5px 3px rgba(0, 0, 0, 0.4);
+}
+
+.image-box {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2% 2% 0 0;
+}
+
+.images {
+  height: 15em;
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat;
+  border-radius: 2% 2% 0 0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+
+.images:hover {
+  transform: scale(1.2);
+  overflow: hidden;
+  border-radius: 2%;
+}
+
+/* IMAGES */
+#image-1 {background-image: url("images/product-1.jpg")}
+
+#image-2 {background-image: url("images/product-14.png")}
+
+#image-3 {background-image: url("images/product-18.jpg")}
+
+#image-4 {background-image: url("images/product-4.jpg")}
+
+#image-5 {background-image: url("images/product-5.jpg")}
+
+#image-6 {background-image: url("images/product-6.jpg" )}
+
+#image-7 {background-image: url("images/product-7.jpg")}
+
+#image-8 {background-image: url("images/product-13.webp")}
+
+#image-9 {background-image: url("images/product_01.jpg");}
+
+#image-10 {background-image: url("images/Strawberries.jpg")}
+
+#image-11 {background-image: url("images/orange.jpg")}
+
+#image-12 {background-image: url("images/mango.Jpg")}
+
+#image-13 {background-image: url("images/pomegranate1.jpg")}
+
+#image-14 {background-image: url("images/grapes.jpg")}
+
+#image-15 {background-image: url("images/product_07.jpg")}
+
+#image-16 {background-image: url("images/watermelon.webp")}
+
+
+
+
+.text-box {
+  width: 100%;
+  float: left;
+  border: 0.01em solid #dddbdb;
+  border-radius: 0 0 2% 2%;
+  padding: 1em;
+}
+
+h2, h3 {
+  float: left;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin: 0.2em auto;
+}
+
+.item, .price {
+  clear: left;
+  width: 100%;
+  text-align: center;
+}
+
+.price {
+  color: Grey;
+}
+
+.description, label, button, input {
+  float: left;
+  clear: left;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+  margin: 0.2em auto;
+}
+
+input:focus {
+  outline-color: #fdf;
+}
+
+label {
+  width: 60%;
+}
+
+.text-box input {
+  width: 15%;
+  clear: none;
+}
+
+.text-box button {
+  margin-top: 1em;
+}
+
+button {
+  padding: 2%;
+  background-color: #dfd;
+  border: none;
+  border-radius: 2%;
+}
+
+button:hover {
+  bottom: 0.1em;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:active {
+  bottom: 0;
+  background-color: #fdf;
+}
+
+.table-heading, .table-content {
+  width: 75%;
+  margin: 1% 12.25%;
+  float: left;
+  background-color: #dfd;
+}
+
+.table-heading h2 {
+  padding: 1%;
+  margin: 0;
+  text-align: center;
+}
+
+.cart-product {
+  width: 50%;
+  float: left;
+}
+
+.cart-price {
+  width: 15%;
+  float: left;
+}
+
+.cart-quantity {
+  width: 10%;
+  float: left;
+}
+
+.cart-total {
+  width: 25%;
+  float: left;
+}
+
+.cart-image-box {
+  width: 20%;
+  overflow: hidden;
+  border-radius: 2%;
+  float: left;
+  margin: 1%;
+}
+
+.cart-images {
+  height: 7em;
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat;
+}
+
+.cart-item {
+  width: 20%;
+  float: left;
+  margin: 3.2em 1%;
+  text-align: center;
+}
+.cart-description {
+  width: 53%;
+  float: left;
+  margin: 3.2em 1%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+}
+
+.cart-price h3, .cart-total h3 {
+  margin: 3.2em 5% 3.2em 20%;
+  width: 60%;
+}
+
+.cart-quantity input {
+  margin: 3.2em 1%;
+  border: none;
+}
+
+.remove {
+  width: 10%;
+  margin: 1px;
+  float: right;
+  clear: right;
+}
+
+.coupon {
+  width: 20%;
+  background-color: #dfd;
+  margin: 1% 1% 1% 12.25%;
+  float: left;
+  height: 6em;
+}
+
+.coupon input {
+  width: 60%;
+  border: none;
+  margin: 12.75% 5%;
+  padding: 1%;
+}
+
+.coupon button {
+  width: 25%;
+  float: left;
+  clear: right;
+  margin: 12% 5% 12% 0;
+}
+
+.keep-shopping {
+  width: 15%;
+  height: 6em;
+  float: left;
+  margin: 1% auto;
+  padding: 1%;
+  background-color: #dfd;
+}
+
+.keep-shopping button {
+  text-transform: uppercase;
+  margin: 12% auto;
+  
+}
+
+.checkout {
+  width: 37.25%;
+  margin: 1% 12.75% 1% 1%;
+  float: right;
+  background-color: #dfd;
+  height: 6em;
+}
+.ion-ios-heart{
+  color: black;
+  width: 30%;
+
+}
+.large-font{
+  font-size:xxx-large;
+}
+.top-20{
+  position:relative;
+  top:20vh;
+}
+/* ion-icon.active{
+  animation:like 0.5s 1;
+  fill:red;
+  stroke:none;
+}
+ion-icon{
+  fill:transparent;
+  stroke:black;
+  stroke-width:30;
+  transition:all 0.5s;
+}
+
+
+@-webkit-keyframes like {
+  0%   { transform: scale(1); }
+  90%   { transform: scale(1.2); }
+  100% { transform: scale(1.1); }
+} */
+
+
+
+
+.h_container{
+    background-color: white;
+    border-radius: 20px;
+    /* box-shadow: 0 2px 8px black; */
+    display: inline;
+    float: right;
+   outline: black;
+
+
+}
+#heart{
+    font-size: 25px;
+}
+#heart:hover{
+    color:red;
+}
+.checkout button {
+  width: 30%;
+  clear: none;
+  margin: 5.4% 0 5.4% 5.5%;
+  text-transform: uppercase;
+}
+
+.final-cart-total {
+  width: 15%;
+  float: right;
+  margin: 7%;
+  background-color: White;
+}
+
+.final-cart-total h3 {
+  color: Black;
+}  
+.blank-color {
+        color:black;
+    }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <ul class="nav navbar-nav">
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="vegitables.html">Fresh vegitables</a></li>
+                <li><a href="fruits.product.html">Fresh Fruits</a></li>
+              </ul>
+            </li> 
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Product <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="add_product.html">Add Product</a></li>
+                <li><a href="view_product.html">View Product</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Orders & Payment <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="view_orders.html">View Orders</a></li>
+                <li><a href="view_payment.html">View Payments</a></li>
+              </ul>
+            </li> 
+            <li><a href="view customers.html">View Customers</a></li>   
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">shop <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="product-single.html">Single Product</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+      
+      
+              </ul>
+              <li><a href="contact.html">Contact</a></li>   
+
+            </li>
+          </li> 
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="about.html">About</a></li>   
+      
+            <li><a href=""><span class="glyphicon glyphicon-user"></span> admin@gmail.com</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div class="listing-section">
+        <div class="product">
+          <div class="h_container">
+            
+            <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+             
+              <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+         
+              </span>
+  
+            </a>
+          </div>
+          <div class="image-box">
+            <div class="images" id="image-1"></div>
+          </div>
+          <div class="text-box">
+            <h2 class="item">capsicum</h2>
+            <h3 class="price">&#8377;4.99</h3>
+            <p class="description">A bag of delicious capsicum!</p>
+            <label for="item-1-quantity">Quantity:</label>
+            <input type="text" name="item-1-quantity" id="item-1-quantity" value="1">
+            <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+          </div>
+        </div>
+        <div class="product">
+          
+          <div class="h_container">
+            
+            <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+             
+              <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+         
+              </span>
+  
+            </a>
+          </div>
+          <div class="image-box">
+            <div class="images" id="image-2"></div>
+          </div>
+          <div class="text-box">
+            <h2 class="item">Brinjal</h2>
+            <h3 class="price">&#8377;4.99</h3>
+            <p class="description">A bag of delicious Brinjal!</p>
+            <label for="item-2-quantity">Quantity:</label>
+            <input type="text" name="item-2-quantity" id="item-2-quantity" value="1">
+            <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+          </div>
+        </div>
+        <div class="product">
+          <div class="h_container">
+            
+            <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+             
+              <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+         
+              </span>
+  
+            </a>
+          </div>
+          <div class="image-box">
+            <div class="images" id="image-3"></div>
+          </div>
+          <div class="text-box">
+            <h2 class="item">cucumber</h2>
+            <h3 class="price">&#8377;4.99</h3>
+            <p class="description">A bag of delicious cucumber!</p>
+            <label for="item-3-quantity">Quantity:</label>
+            <input type="text" name="item-3-quantity" id="item-3-quantity" value="1">
+            <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+          </div>
+        </div>
+        <div class="product">
+          <div class="m-auto d-flex">
+            
+            <!-- <a href="shopping cart.html" class="heart d-flex justify-content-center align-items-center ">
+              <span><i class="ion-ios-heart"></i></span>
+            </a> -->
+
+         
+        <div class="h_container">
+            
+          <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+           
+            <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+       
+            </span>
+
+          </a>
+        </div>
+
+       
+          <!-- Add a link around the heart icon -->
+        
+          </div>
+          <div class="image-box">
+            <div class="images" id="image-4"></div>
+          </div>
+          <div class="text-box">
+            <h2 class="item">Purple Cabbage</h2>
+            <h3 class="price">&#8377;4.99</h3>
+            <p class="description">A bag of delicious Purple Cabbage!</p>
+            <label for="item-4-quantity">Quantity:</label>
+            <input type="text" name="item-4-quantity" id="item-4-quantity" value="1">
+            <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+          </div>
+        </div>
+        <div class="product">
+          <div class="h_container">
+            
+            <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+             
+              <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+         
+              </span>
+  
+            </a>
+          </div>
+          <div class="image-box">
+            <div class="images" id="image-5"></div>
+          </div>
+          <div class="text-box">
+            <h2 class="item">Tomato</h2>
+            <h3 class="price">&#8377;4.99</h3>
+            <p class="description">A bag of delicious Tomato!</p>
+            <label for="item-5-quantity">Quantity:</label>
+            <input type="text" name="item-5-quantity" id="item-5-quantity" value="1">
+            <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+          </div>
+        </div>
+        <div class="product">
+          <div class="h_container">
+            
+            <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+             
+              <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+         
+              </span>
+  
+            </a>
+          </div>
+          <div class="image-box">
+            <div class="images" id="image-6"></div>
+          </div>
+          <div class="text-box">
+            <h2 class="item">Brocolli</h2>
+            <h3 class="price">&#8377;4.99</h3>
+            <p class="description">A bag of delicious Brocolli!</p>
+            <label for="item-6-quantity">Quantity:</label>
+            <input type="text" name="item-6-quantity" id="item-6-quantity" value="1">
+            <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+          </div>
+        </div>
+        <div class="product">
+          <div class="h_container">
+            
+            <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+             
+              <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+         
+              </span>
+  
+            </a>
+          </div>
+          <div class="image-box">
+            <div class="images" id="image-7"></div>
+          </div>
+          <div class="text-box">
+            <h2 class="item">Carrots</h2>
+            <h3 class="price">&#8377;4.99</h3>
+            <p class="description">A bag of delicious Carrots!</p>
+            <label for="item-7-quantity">Quantity:</label>
+            <input type="text" name="item-7-quantity" id="item-7-quantity" value="1">
+            <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+          </div>
+        </div>
+        <div class="product">
+          <div class="h_container">
+            
+            <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+             
+              <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+         
+              </span>
+  
+            </a>
+          </div>
+          <div class="image-box">
+            <div class="images" id="image-8"></div>
+          </div>
+          <div class="text-box">
+            <h2 class="item">onion</h2>
+            <h3 class="price">&#8377;4.99</h3>
+            <p class="description">A bag of delicious onion!</p>
+            <label for="item-8-quantity">Quantity:</label>
+            <input type="text" name="item-8-quantity" id="item-8-quantity" value="1">
+            <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+          </div>
+        </div>
+       
+        
+        </div>
+     
+        <div class="listing-section">
+            <div class="product">
+              <div class="h_container">
+            
+                <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+                 
+                  <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+             
+                  </span>
+      
+                </a>
+              </div>
+              <div class="image-box">
+                <div class="images" id="image-9"></div>
+              </div>
+              <div class="text-box">
+                <h2 class="item">Apple</h2>
+                <h3 class="price">&#8377;4.99</h3>
+                <p class="description">A bag of delicious Apple!</p>
+                <label for="item-1-quantity">Quantity:</label>
+                <input type="text" name="item-1-quantity" id="item-1-quantity" value="1">
+                <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+              </div>
+            </div>
+            <div class="product">
+              <div class="h_container">
+            
+                <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+                 
+                  <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+             
+                  </span>
+      
+                </a>
+              </div>
+              <div class="image-box">
+                <div class="images" id="image-10"></div>
+              </div>
+              <div class="text-box">
+                <h2 class="item">Strawberry</h2>
+                <h3 class="price">&#8377;4.99</h3>
+                <p class="description">A bag of delicious Strawberry!</p>
+                <label for="item-2-quantity">Quantity:</label>
+                <input type="text" name="item-2-quantity" id="item-2-quantity" value="1">
+                <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+              </div>
+            </div>
+            <div class="product">
+              <div class="h_container">
+            
+                <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+                 
+                  <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+             
+                  </span>
+      
+                </a>
+              </div>
+              <div class="image-box">
+                <div class="images" id="image-11"></div>
+              </div>
+              <div class="text-box">
+                <h2 class="item">orange</h2>
+                <h3 class="price">&#8377;4.99</h3>
+                <p class="description">A bag of delicious orange!</p>
+                <label for="item-3-quantity">Quantity:</label>
+                <input type="text" name="item-3-quantity" id="item-3-quantity" value="1">
+                <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+              </div>
+            </div>
+            <div class="product">
+              <div class="h_container">
+            
+                <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+                 
+                  <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+             
+                  </span>
+      
+                </a>
+              </div>
+              <div class="image-box">
+                <div class="images" id="image-12"></div>
+              </div>
+              <div class="text-box">
+                <h2 class="item">mango</h2>
+                <h3 class="price">&#8377;4.99</h3>
+                <p class="description">A bag of delicious mango!</p>
+                <label for="item-4-quantity">Quantity:</label>
+                <input type="text" name="item-4-quantity" id="item-4-quantity" value="1">
+                <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+              </div>
+            </div>
+            <div class="product">
+              <div class="h_container">
+            
+                <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+                 
+                  <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+             
+                  </span>
+      
+                </a>
+              </div>
+              <div class="image-box">
+                <div class="images" id="image-13"></div>
+              </div>
+              <div class="text-box">
+                <h2 class="item">Pomegranates</h2>
+                <h3 class="price">&#8377;4.99</h3>
+                <p class="description">A bag of delicious Pomegranates!</p>
+                <label for="item-5-quantity">Quantity:</label>
+                <input type="text" name="item-5-quantity" id="item-5-quantity" value="1">
+                <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+              </div>
+            </div>
+            <div class="product">
+              <div class="h_container">
+            
+                <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+                 
+                  <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+             
+                  </span>
+      
+                </a>
+              </div>
+              
+              <div class="image-box">
+                <div class="images" id="image-14"></div>
+              </div>
+              <div class="text-box">
+                <h2 class="item">Grapes</h2>
+                <h3 class="price">&#8377;4.99</h3>
+                <p class="description">A bag of delicious Grapes!</p>
+                <label for="item-6-quantity">Quantity:</label>
+                <input type="text" name="item-6-quantity" id="item-6-quantity" value="1">
+               
+                <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+              </div>
+            </div>
+            <div class="product">
+              <div class="h_container">
+            
+                <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+                 
+                  <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+             
+                  </span>
+      
+                </a>
+              </div>
+              <div class="image-box">
+                <div class="images" id="image-15"></div>
+              </div>
+              <div class="text-box">
+                <h2 class="item">cherry</h2>
+                <h3 class="price">&#8377;4.99</h3>
+                <p class="description">A bag of delicious cherry!</p>
+                <label for="item-7-quantity">Quantity:</label>
+                <input type="text" name="item-7-quantity" id="item-7-quantity" value="1">
+            
+                <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+              </div>
+            </div>
+            <div class="product">
+              <div class="h_container">
+            
+                <a href="wishlist.html" class="heart d-flex justify-content-center align-items-center ">
+                 
+                  <span><i id="heart"class='fa fa-heart-o'style="font-size:26px;"></i></span>
+             
+                  </span>
+      
+                </a>
+              </div>
+              <div class="image-box">
+                <div class="images" id="image-16"></div>
+              </div>
+              <div class="text-box">
+                <h2 class="item">watermelon</h2>
+                <h3 class="price">&#8377;4.99</h3>
+                <p class="description">A bag of delicious watermelon!</p>
+                <label for="item-8-quantity">Quantity:</label>
+                <input type="text" name="item-8-quantity" id="item-8-quantity" value="1">
+                <a href="shopping cart.html"><button type="button" name="item-8-button" id="item-8-button">Add to Cart</button></a>
+              </div>
+            </div>
+            <div class="product">
+              
+              <div class="image-box">
+                <div class="images" id="image-17"></div>
+              </div>
+
+              <script>
+                let icon = document.querySelector('ion-icon');
+icon.onclick = function(){
+  icon.classList.toggle('active');
+}
+              </script>
+</body>
+</html>
